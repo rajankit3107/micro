@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useOrganization, useOrganizationList } from "@clerk/clerk-react";
 import Image from "next/image";
+import { Hint } from "../hint";
 
 interface ItemProps {
   id: string;
@@ -20,16 +21,18 @@ export const Item = ({ id, name, imageUrl }: ItemProps) => {
   };
   return (
     <div className="aspect-square relative">
-      <Image
-        fill
-        src={imageUrl}
-        onClick={onClick}
-        alt={name}
-        className={cn(
-          "rounded-md cursor-pointer opacity-75 hover:opacity-100 transition",
-          isActive && "opacity-100"
-        )}
-      />
+      <Hint label={name} side="right" sideOffset={6} align="start">
+        <Image
+          fill
+          src={imageUrl}
+          onClick={onClick}
+          alt={name}
+          className={cn(
+            "rounded-md cursor-pointer opacity-75 hover:opacity-100 transition",
+            isActive && "opacity-100"
+          )}
+        />
+      </Hint>
     </div>
   );
 };
