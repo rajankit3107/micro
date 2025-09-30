@@ -3,7 +3,7 @@ import { useOrganization, useOrganizationList } from "@clerk/clerk-react";
 import Image from "next/image";
 import { Hint } from "../hint";
 
-interface ItemProps {
+export interface ItemProps {
   id: string;
   name: string;
   imageUrl: string;
