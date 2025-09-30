@@ -1,5 +1,6 @@
 "use client";
 
+import { EmptyBoards } from "./empty-board";
 import { EmptySearch } from "./empty-search";
 import { NoFavorites } from "./no-favorites";
 
@@ -31,7 +32,11 @@ export const BoardList = ({ orgId, query }: BaordListProps) => {
   }
 
   if (!data?.length) {
-    return <div>No micros created yet</div>;
+    return (
+      <div>
+        <EmptyBoards />
+      </div>
+    );
   }
 
   return <div></div>;
