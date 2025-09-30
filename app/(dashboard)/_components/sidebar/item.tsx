@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useOrganization, useOrganizationList } from "@clerk/clerk-react";
+import { useOrganization, useOrganizationList } from "@clerk/nextjs";
 import Image from "next/image";
 import { Hint } from "../hint";
 
