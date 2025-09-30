@@ -1,6 +1,7 @@
 "use client";
 
 import { EmptySearch } from "./empty-search";
+import { NoFavorites } from "./no-favorites";
 
 interface BaordListProps {
   orgId: string;
@@ -22,7 +23,11 @@ export const BoardList = ({ orgId, query }: BaordListProps) => {
   }
 
   if (!data?.length && query.favorites) {
-    return <div>No Favorites</div>;
+    return (
+      <div>
+        <NoFavorites />
+      </div>
+    );
   }
 
   if (!data?.length) {
