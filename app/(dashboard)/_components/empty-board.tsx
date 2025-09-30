@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { useOrganization } from "@clerk/nextjs";
-import { ItemProps } from "./sidebar/item";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { toast } from "sonner";
 
